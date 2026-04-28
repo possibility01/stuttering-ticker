@@ -16,10 +16,13 @@
   }
 
   body {
+    /*
+      Brown/rust glow anchored LEFT covering ~30% width
+      Right 70% drops to near-black — matches your dashboard exactly
+    */
     background:
-      radial-gradient(ellipse at 30% 60%, rgba(184,74,46,0.22) 0%, transparent 55%),
-      radial-gradient(ellipse at 78% 20%, rgba(201,146,58,0.10) 0%, transparent 48%),
-      #1A1208;
+      radial-gradient(ellipse at 0% 50%, rgba(160,60,20,0.55) 0%, rgba(130,45,15,0.25) 25%, transparent 55%),
+      #130C06;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -55,11 +58,11 @@
   }
   .ticker-outer::before {
     left: 0;
-    background: linear-gradient(to right, #1A1208, transparent);
+    background: linear-gradient(to right, #2A1208, transparent);
   }
   .ticker-outer::after {
     right: 0;
-    background: linear-gradient(to left, #1A1208, transparent);
+    background: linear-gradient(to left, #130C06, transparent);
   }
 
   .ticker-track {
