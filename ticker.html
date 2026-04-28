@@ -16,43 +16,34 @@
   }
 
   body {
-    /*
-      Matches the LOWER zone of your dashboard where the ticker sits:
-      - Base: very dark warm brown #120D07
-      - Rust bloom: centred, shifted UP (so it bleeds in from top of this element)
-      - Matches the full-page gradient when this box sits in the lower half
-    */
     background:
-      radial-gradient(ellipse at 50% -20%, rgba(160,55,18,0.38) 0%, transparent 60%),
-      radial-gradient(ellipse at 80% 110%, rgba(201,146,58,0.07) 0%, transparent 50%),
-      #120D07;
+      radial-gradient(ellipse at 30% 60%, rgba(184,74,46,0.22) 0%, transparent 55%),
+      radial-gradient(ellipse at 78% 20%, rgba(201,146,58,0.10) 0%, transparent 48%),
+      #1A1208;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
 
-  /* ── top label ── */
   .label {
     font-family: 'Georgia', serif;
     font-size: 10px;
     letter-spacing: 5px;
     text-transform: uppercase;
-    color: rgba(201,146,58,0.7);
+    color: rgba(201,146,58,0.75);
     margin-bottom: 18px;
   }
 
-  /* ── ticker wrapper ── */
   .ticker-outer {
     width: 100%;
     overflow: hidden;
     position: relative;
     padding: 14px 0;
-    border-top: 1px solid rgba(253,250,245,0.05);
-    border-bottom: 1px solid rgba(253,250,245,0.05);
+    border-top: 1px solid rgba(253,250,245,0.06);
+    border-bottom: 1px solid rgba(253,250,245,0.06);
   }
 
-  /* edge fades using exact base colour */
   .ticker-outer::before,
   .ticker-outer::after {
     content: '';
@@ -64,14 +55,13 @@
   }
   .ticker-outer::before {
     left: 0;
-    background: linear-gradient(to right, #120D07, transparent);
+    background: linear-gradient(to right, #1A1208, transparent);
   }
   .ticker-outer::after {
     right: 0;
-    background: linear-gradient(to left, #120D07, transparent);
+    background: linear-gradient(to left, #1A1208, transparent);
   }
 
-  /* ── track ── */
   .ticker-track {
     display: inline-block;
     white-space: nowrap;
@@ -111,11 +101,10 @@
   }
 
   .ticker-track .sep {
-    color: rgba(201,146,58,0.38);
+    color: rgba(201,146,58,0.4);
     margin: 0 4px;
   }
 
-  /* ── tagline ── */
   .tagline {
     font-family: 'Georgia', serif;
     font-size: 12px;
@@ -128,7 +117,7 @@
   }
 
   .tagline em {
-    color: rgba(201,146,58,0.65);
+    color: rgba(201,146,58,0.7);
     font-style: normal;
   }
 </style>
