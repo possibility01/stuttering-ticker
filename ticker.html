@@ -3,20 +3,26 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta http-equiv="X-UA-Compatible" content="allowtransparency=true"/>
 <title>Famous Voices Ticker</title>
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-  html, body {
-    width: 100%;
-    height: 100%;
-    background: transparent; /* ✅ transparent */
+  html {
+    background: transparent !important;
+  }
+
+  body {
+    width: 100%; height: 100%;
+    background: transparent !important;
     overflow: hidden;
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
+
+  /* grain removed — causes white layer conflict with transparent bg */
 
   /* ── top label ── */
   .label {
@@ -148,7 +154,7 @@
     { name: "James Earl Jones",  role: "Actor"               },
     { name: "Nicole Kidman",     role: "Actress"             },
     { name: "Bruce Willis",      role: "Actor"               },
-    { name: "Idris Akilapa",     role: "Data Viz Specialist & Tableau Developer" },
+    { name: "Idris",             role: "Data Viz Specialist" },
   ];
 
   // duplicate for seamless infinite loop
