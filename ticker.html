@@ -16,13 +16,9 @@
   }
 
   body {
-    /*
-      Brown/rust glow anchored LEFT covering ~30% width
-      Right 70% drops to near-black — matches your dashboard exactly
-    */
-    background:
-      radial-gradient(ellipse at 0% 50%, rgba(160,60,20,0.55) 0%, rgba(130,45,15,0.25) 25%, transparent 55%),
-      #130C06;
+    /* simple left-to-right linear gradient:
+       brownish-rust on the left 30%, fading to dark on the right 70% */
+    background: linear-gradient(to right, #3D1A0A 0%, #1A0D06 30%, #0F0906 100%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -58,11 +54,11 @@
   }
   .ticker-outer::before {
     left: 0;
-    background: linear-gradient(to right, #2A1208, transparent);
+    background: linear-gradient(to right, #3D1A0A, transparent);
   }
   .ticker-outer::after {
     right: 0;
-    background: linear-gradient(to left, #130C06, transparent);
+    background: linear-gradient(to left, #0F0906, transparent);
   }
 
   .ticker-track {
@@ -143,7 +139,7 @@
     { name: "Ed Sheeran",        role: "Musician"            },
     { name: "King George VI",    role: "Monarch"             },
     { name: "Marilyn Monroe",    role: "Icon"                },
-    { name: "Tiger Woods",       role: "Champion"            },
+    { name: "Tiger Foods",       role: "Champion"            },
     { name: "Emily Blunt",       role: "Actress"             },
     { name: "Samuel L. Jackson", role: "Actor"               },
     { name: "Winston Churchill", role: "Statesman"           },
